@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF 分类预览和下载</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+  }
+  #container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  #contents {
+    width: 30%;
+    margin-right: 20px;
+  }
+  #search-box {
+    padding: 8px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  #search-box input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #directory-tree {
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  #directory-tree li {
+    cursor: pointer;
+    line-height: 1.5;
+    position: relative;
+    margin-left: 20px;
+  }
+  #directory-tree li:before {
+    content: '▸';
+    position: absolute;
+    left: -16px;
+  }
+  #pdf-preview {
+    width: 65%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .directory {
+    font-weight: bold;
+  }
+  .pdf-link {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 0;
+  }
+  .pdf-link:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <div id="contents">
+    <div id="search-box">
+      <input type="text" id="search" placeholder="搜索PDF...">
+    </div>
+    <ul id="directory-tree">
+      <li class="directory">目录1</li>
+      <li class="directory">目录2
+        <ul>
+          <li><a href="#" class="pdf-link">PDF文件2.1</a></li>
+          <li><a href="#" class="pdf-link">PDF文件2.2</a></li>
+        </ul>
+      </li>
+      <li class="directory">目录3</li>
+    </ul>
+  </div>
+  <div id="pdf-preview">
+    <p>选择一个PDF文件以预览</p>
+    <!-- 预览区域 -->
+  </div>
+</div>
+<script>
+  // 在这里添加JavaScript代码处理目录树的展开和折叠
+</script>
+</body>
+</html>
